@@ -30,21 +30,21 @@ namespace testdbfirst.Controllers
         const string _errorDelete = "19973";
         const string _errorRead = "19974";
 
-        //[HttpGet("getAllRefProductCategories")]
-        //public ActionResult<RefProductCategories> getAllRefProductCategories()
-        //{
-        //    try
-        //    {
-        //        var listRefProductCategories = _resRefProductCategories.getAllRefProductCategories();
-        //        return Ok(listRefProductCategories);
-        //    }
-        //    catch (Exception)
-        //    {
+        [HttpGet("getAllRefProductCategories")]
+        public ActionResult<RefProductCategories> getAllRefProductCategories()
+        {
+            try
+            {
+                var listRefProductCategories = _resRefProductCategories.getAllRefProductCategories();
+                return Ok(listRefProductCategories);
+            }
+            catch (Exception)
+            {
 
-        //        return Ok(_errorRead);
-        //    }
+                return Ok(_errorRead);
+            }
 
-        //}
+        }
 
         [HttpPost("createRefProductCategories")]
         public ActionResult<RefProductCategories> createRefProductCategories([FromBody] RefProductCategories RPC)
